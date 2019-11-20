@@ -79,12 +79,19 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="专注Java">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;index.html">
+<meta name="description" content="Code Review最佳实践1本文转载自：http:&#x2F;&#x2F;t.cn&#x2F;AilixZCc  我一直认为Code Review（代码审查）是软件开发中的最佳实践之一，可以有效提高整体代码质量，及时发现代码中可能存在的问题。包括像Google、微软这些公司，Code Review都是基本要求，代码合并之前必须要有人审查通过才行。 然而对于我观察到的大部分软件开发团队来说，认真做Code Review的很少">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Code Review最佳实践">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;20&#x2F;Code%20Review%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5&#x2F;index.html">
 <meta property="og:site_name" content="专注Java">
+<meta property="og:description" content="Code Review最佳实践1本文转载自：http:&#x2F;&#x2F;t.cn&#x2F;AilixZCc  我一直认为Code Review（代码审查）是软件开发中的最佳实践之一，可以有效提高整体代码质量，及时发现代码中可能存在的问题。包括像Google、微软这些公司，Code Review都是基本要求，代码合并之前必须要有人审查通过才行。 然而对于我观察到的大部分软件开发团队来说，认真做Code Review的很少">
 <meta property="og:locale" content="en">
+<meta property="og:image" content="https:&#x2F;&#x2F;mmbiz.qpic.cn&#x2F;mmbiz_png&#x2F;iaIdQfEric9TysWacmArUXhicFh5kSYLZy3wdaDK5s5eVGVonCPkVnO1ALjynvZh6KyR0WcWZyDDjWA98h9LvsMRQ&#x2F;640?wx_fmt=png&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1">
+<meta property="og:image" content="https:&#x2F;&#x2F;mmbiz.qpic.cn&#x2F;mmbiz_jpg&#x2F;iaIdQfEric9TysWacmArUXhicFh5kSYLZy3cdSXBmMmIOkueqF5HmYZs64lHz4uguP8ibPaoQhyS08whGXyGw0d3uA&#x2F;640?wx_fmt=jpeg&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1">
+<meta property="og:image" content="https:&#x2F;&#x2F;mmbiz.qpic.cn&#x2F;mmbiz_jpg&#x2F;iaIdQfEric9TysWacmArUXhicFh5kSYLZy3cdSXBmMmIOkueqF5HmYZs64lHz4uguP8ibPaoQhyS08whGXyGw0d3uA&#x2F;640?wx_fmt=jpeg&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1">
+<meta property="og:updated_time" content="2019-11-20T09:28:12.174Z">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;mmbiz.qpic.cn&#x2F;mmbiz_png&#x2F;iaIdQfEric9TysWacmArUXhicFh5kSYLZy3wdaDK5s5eVGVonCPkVnO1ALjynvZh6KyR0WcWZyDDjWA98h9LvsMRQ&#x2F;640?wx_fmt=png&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1">
 
 
 
@@ -114,13 +121,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/2019/11/20/Code Review最佳实践/"/>
 
 
 
 
 
-  <title>专注Java</title>
+  <title>Code Review最佳实践 | 专注Java</title>
   
 
 
@@ -139,8 +146,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -213,9 +219,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -245,9 +251,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/11/20/Code%20Review%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/" itemprop="url">Code Review最佳实践</a></h1>
+          <h1 class="post-title" itemprop="name headline">Code Review最佳实践</h1>
         
 
         <div class="post-meta">
@@ -297,9 +301,7 @@
       
 
       
-        
-          
-            <h1 id="Code-Review最佳实践"><a href="#Code-Review最佳实践" class="headerlink" title="Code Review最佳实践"></a>Code Review最佳实践</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">本文转载自：http://t.cn/AilixZCc</span><br></pre></td></tr></table></figure>
+        <h1 id="Code-Review最佳实践"><a href="#Code-Review最佳实践" class="headerlink" title="Code Review最佳实践"></a>Code Review最佳实践</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">本文转载自：http://t.cn/AilixZCc</span><br></pre></td></tr></table></figure>
 
 <p>我一直认为Code Review（代码审查）是软件开发中的最佳实践之一，可以有效提高整体代码质量，及时发现代码中可能存在的问题。包括像Google、微软这些公司，Code Review都是基本要求，代码合并之前必须要有人审查通过才行。</p>
 <p>然而对于我观察到的大部分软件开发团队来说，认真做Code Review的很少，有的流于形式，有的可能根本就没有Code Review的环节，代码质量只依赖于事后的测试。也有些团队想做好代码审查，但不知道怎么做比较好。</p>
@@ -369,8 +371,6 @@
 <p>另外文明用语，不要用一些负面的词汇。</p>
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>Code Review是一种非常好的开发实践，如果你还没开始，不妨逐步实践起来；如果已经做了效果不好，不妨对照一下，看有没有把Code Review作为开发流程的必选项而不是可选项？有没有把Code Review变成一种开发文化而不仅仅是一种制度？</p>
 
-          
-        
       
     </div>
     
@@ -387,133 +387,28 @@
       
 
       
-
-      
-
       
       
-        <div class="post-eof"></div>
+
       
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/20/%E6%98%AF%E6%97%B6%E5%80%99%E6%94%BE%E5%BC%83SimpleDateFormat%E4%BA%86/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="winnie">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="专注Java">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/11/20/%E6%98%AF%E6%97%B6%E5%80%99%E6%94%BE%E5%BC%83SimpleDateFormat%E4%BA%86/" itemprop="url">是时候放弃SimpleDateFormat了</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-11-20T15:31:32+08:00">
-                2019-11-20
-              </time>
+              <a href="/2019/11/20/%E6%98%AF%E6%97%B6%E5%80%99%E6%94%BE%E5%BC%83SimpleDateFormat%E4%BA%86/" rel="next" title="是时候放弃SimpleDateFormat了">
+                <i class="fa fa-chevron-left"></i> 是时候放弃SimpleDateFormat了
+              </a>
             
+          </div>
 
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
             
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <h1 id="基于JDK1-8的DateTimeFormatter"><a href="#基于JDK1-8的DateTimeFormatter" class="headerlink" title="基于JDK1.8的DateTimeFormatter"></a>基于JDK1.8的DateTimeFormatter</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">public class SimpleDateFormatTest &#123;</span><br><span class="line"></span><br><span class="line">    private static final DateTimeFormatter formatter = DateTimeFormatter.ofPattern(&quot;yyyy-MM-dd HH:mm:ss&quot;);</span><br><span class="line"></span><br><span class="line">    public static String formatDate2(LocalDateTime date) &#123;</span><br><span class="line">        return formatter.format(date);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public static LocalDateTime parse2(String dateNow) &#123;</span><br><span class="line">        return LocalDateTime.parse(dateNow, formatter);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public static void main(String[] args) throws InterruptedException, ParseException &#123;</span><br><span class="line"></span><br><span class="line">        ExecutorService service = Executors.newFixedThreadPool(100);</span><br><span class="line"></span><br><span class="line">        // 20个线程</span><br><span class="line">        for (int i = 0; i &lt; 20; i++) &#123;</span><br><span class="line">            service.execute(() -&gt; &#123;</span><br><span class="line">                for (int j = 0; j &lt; 10; j++) &#123;</span><br><span class="line">                    try &#123;</span><br><span class="line">                        System.out.println(parse2(formatDate2(LocalDateTime.now())));</span><br><span class="line">                    &#125; catch (Exception e) &#123;</span><br><span class="line">                        e.printStackTrace();</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;);</span><br><span class="line">        &#125;</span><br><span class="line">        // 等待上述的线程执行完</span><br><span class="line">        service.shutdown();</span><br><span class="line">        service.awaitTermination(1, TimeUnit.DAYS);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -523,132 +418,11 @@
   </article>
 
 
-    
-      
 
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/20/%E7%94%A8%E6%9E%9A%E4%B8%BE%E5%AE%9E%E7%8E%B0%E5%8D%95%E4%BE%8B/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="winnie">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="专注Java">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/11/20/%E7%94%A8%E6%9E%9A%E4%B8%BE%E5%AE%9E%E7%8E%B0%E5%8D%95%E4%BE%8B/" itemprop="url">用枚举实现单例</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-11-20T11:50:10+08:00">
-                2019-11-20
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="用枚举实现单例"><a href="#用枚举实现单例" class="headerlink" title="用枚举实现单例"></a>用枚举实现单例</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">public enum Singleton &#123;  </span><br><span class="line">    INSTANCE;  </span><br><span class="line">    public void whateverMethod() &#123;  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>static类型的属性会在类被加载之后被初始化，我们在<a href="http://mp.weixin.qq.com/s?__biz=MzI3NzE0NjcwMg==&mid=2650120630&idx=1&sn=41e8910a58d8547959c873a97ee9b825&chksm=f36bbc97c41c35812882b1d2d4a1f4903080c3f7cda6b26a9b24b07faade745f900cb7f82da0&scene=21#wechat_redirect" target="_blank" rel="noopener">深度分析Java的ClassLoader机制（源码级别）</a>中介绍过，<strong>当一个Java类第一次被真正使用到的时候静态资源被初始化、Java类的加载和初始化过程都是线程安全的（因为虚拟机在加载枚举的类的时候，会使用ClassLoader的loadClass方法，而这个方法使用同步代码块保证了线程安全）</strong>。所以，创建一个enum类型是线程安全的。</p>
-
-          
-        
+    <div class="post-spread">
       
     </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
   </div>
-  
-  
-  
-  </article>
-
-
-    
-  </section>
-
-  
 
 
           </div>
@@ -656,6 +430,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -676,8 +454,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -719,6 +506,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Code-Review最佳实践"><span class="nav-number">1.</span> <span class="nav-text">Code Review最佳实践</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#首先是团队知识共享的角度"><span class="nav-number">1.0.1.</span> <span class="nav-text">首先是团队知识共享的角度</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#然后是代码质量的角度"><span class="nav-number">1.0.2.</span> <span class="nav-text">然后是代码质量的角度</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#还有团队规范的角度"><span class="nav-number">1.0.3.</span> <span class="nav-text">还有团队规范的角度</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#该怎么做？"><span class="nav-number">1.1.</span> <span class="nav-text">该怎么做？</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#把Code-Review作为开发流程的必选项而不是可选项"><span class="nav-number">1.1.1.</span> <span class="nav-text">把Code Review作为开发流程的必选项而不是可选项</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#把Code-Review变成一种开发文化而不仅仅是一种制度"><span class="nav-number">1.1.2.</span> <span class="nav-text">把Code Review变成一种开发文化而不仅仅是一种制度</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#一些Code-Review的经验技巧"><span class="nav-number">1.2.</span> <span class="nav-text">一些Code Review的经验技巧</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#选什么工具辅助做CODE-REVIEW？"><span class="nav-number">1.2.1.</span> <span class="nav-text">选什么工具辅助做CODE REVIEW？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配合什么样的开发流程比较好？"><span class="nav-number">1.2.2.</span> <span class="nav-text">配合什么样的开发流程比较好？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#真遇到紧急情况，来不及代码审查怎么办？"><span class="nav-number">1.2.3.</span> <span class="nav-text">真遇到紧急情况，来不及代码审查怎么办？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#先设计再编码"><span class="nav-number">1.2.4.</span> <span class="nav-text">先设计再编码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码在提交CODE-REVIEW之前，作者要自己先REVIEW和测试一遍"><span class="nav-number">1.2.5.</span> <span class="nav-text">代码在提交CODE REVIEW之前，作者要自己先REVIEW和测试一遍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#PR要小"><span class="nav-number">1.2.6.</span> <span class="nav-text">PR要小</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#对评论进行分级"><span class="nav-number">1.2.7.</span> <span class="nav-text">对评论进行分级</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#评论要友好，避免负面词汇；有说不清楚的问题当面沟通"><span class="nav-number">1.2.8.</span> <span class="nav-text">评论要友好，避免负面词汇；有说不清楚的问题当面沟通</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">1.3.</span> <span class="nav-text">总结</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -852,6 +655,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
