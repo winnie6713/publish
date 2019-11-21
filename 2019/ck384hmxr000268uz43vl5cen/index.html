@@ -6,16 +6,16 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://www.winnie.top">
-  <title>用枚举实现单例 | 专注Java</title>
+  <title>是时候放弃SimpleDateFormat了 | 专注Java</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="用枚举实现单例12345public enum Singleton &amp;#123;      INSTANCE;      public void whateverMethod() &amp;#123;      &amp;#125;  &amp;#125;  static类型的属性会在类被加载之后被初始化，我们在深度分析Java的ClassLoader机制（源码级别）中介绍过，当一个Java类第一次被真正使用到的时候静态">
+  <meta name="description" content="基于JDK1.8的DateTimeFormatter1234567891011121314151617181920212223242526272829303132333435public class SimpleDateFormatTest &amp;#123;    private static final DateTimeFormatter formatter = DateTimeFormatter.">
 <meta property="og:type" content="article">
-<meta property="og:title" content="用枚举实现单例">
-<meta property="og:url" content="http:&#x2F;&#x2F;www.winnie.top&#x2F;2019&#x2F;ck3847i8f0003i0uzdtyd0bco&#x2F;index.html">
+<meta property="og:title" content="是时候放弃SimpleDateFormat了">
+<meta property="og:url" content="http:&#x2F;&#x2F;www.winnie.top&#x2F;2019&#x2F;ck384hmxr000268uz43vl5cen&#x2F;index.html">
 <meta property="og:site_name" content="专注Java">
-<meta property="og:description" content="用枚举实现单例12345public enum Singleton &amp;#123;      INSTANCE;      public void whateverMethod() &amp;#123;      &amp;#125;  &amp;#125;  static类型的属性会在类被加载之后被初始化，我们在深度分析Java的ClassLoader机制（源码级别）中介绍过，当一个Java类第一次被真正使用到的时候静态">
+<meta property="og:description" content="基于JDK1.8的DateTimeFormatter1234567891011121314151617181920212223242526272829303132333435public class SimpleDateFormatTest &amp;#123;    private static final DateTimeFormatter formatter = DateTimeFormatter.">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-11-20T03:52:08.052Z">
+<meta property="og:updated_time" content="2019-11-20T07:33:06.092Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="专注Java" type="application/atom+xml">
@@ -152,29 +152,28 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-用枚举实现单例" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-是时候放弃SimpleDateFormat了" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      用枚举实现单例
+      是时候放弃SimpleDateFormat了
     </h1>
   
 
         
-        <a href="/2019/ck3847i8f0003i0uzdtyd0bco/" class="archive-article-date">
-  	<time datetime="2019-11-20T03:50:10.183Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-20</time>
+        <a href="/2019/ck384hmxr000268uz43vl5cen/" class="archive-article-date">
+  	<time datetime="2019-11-20T07:31:32.232Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-20</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="用枚举实现单例"><a href="#用枚举实现单例" class="headerlink" title="用枚举实现单例"></a>用枚举实现单例</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">public enum Singleton &#123;  </span><br><span class="line">    INSTANCE;  </span><br><span class="line">    public void whateverMethod() &#123;  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <h1 id="基于JDK1-8的DateTimeFormatter"><a href="#基于JDK1-8的DateTimeFormatter" class="headerlink" title="基于JDK1.8的DateTimeFormatter"></a>基于JDK1.8的DateTimeFormatter</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">public class SimpleDateFormatTest &#123;</span><br><span class="line"></span><br><span class="line">    private static final DateTimeFormatter formatter = DateTimeFormatter.ofPattern(&quot;yyyy-MM-dd HH:mm:ss&quot;);</span><br><span class="line"></span><br><span class="line">    public static String formatDate2(LocalDateTime date) &#123;</span><br><span class="line">        return formatter.format(date);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public static LocalDateTime parse2(String dateNow) &#123;</span><br><span class="line">        return LocalDateTime.parse(dateNow, formatter);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public static void main(String[] args) throws InterruptedException, ParseException &#123;</span><br><span class="line"></span><br><span class="line">        ExecutorService service = Executors.newFixedThreadPool(100);</span><br><span class="line"></span><br><span class="line">        // 20个线程</span><br><span class="line">        for (int i = 0; i &lt; 20; i++) &#123;</span><br><span class="line">            service.execute(() -&gt; &#123;</span><br><span class="line">                for (int j = 0; j &lt; 10; j++) &#123;</span><br><span class="line">                    try &#123;</span><br><span class="line">                        System.out.println(parse2(formatDate2(LocalDateTime.now())));</span><br><span class="line">                    &#125; catch (Exception e) &#123;</span><br><span class="line">                        e.printStackTrace();</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;);</span><br><span class="line">        &#125;</span><br><span class="line">        // 等待上述的线程执行完</span><br><span class="line">        service.shutdown();</span><br><span class="line">        service.awaitTermination(1, TimeUnit.DAYS);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>static类型的属性会在类被加载之后被初始化，我们在<a href="http://mp.weixin.qq.com/s?__biz=MzI3NzE0NjcwMg==&mid=2650120630&idx=1&sn=41e8910a58d8547959c873a97ee9b825&chksm=f36bbc97c41c35812882b1d2d4a1f4903080c3f7cda6b26a9b24b07faade745f900cb7f82da0&scene=21#wechat_redirect" target="_blank" rel="noopener">深度分析Java的ClassLoader机制（源码级别）</a>中介绍过，<strong>当一个Java类第一次被真正使用到的时候静态资源被初始化、Java类的加载和初始化过程都是线程安全的（因为虚拟机在加载枚举的类的时候，会使用ClassLoader的loadClass方法，而这个方法使用同步代码块保证了线程安全）</strong>。所以，创建一个enum类型是线程安全的。</p>
 
       
 
@@ -254,7 +253,7 @@
     <a class="close js-modal-close" href="javascript:;" target="_blank" rel="noopener"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://www.winnie.top/2019/ck3847i8f0003i0uzdtyd0bco/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://www.winnie.top/2019/ck384hmxr000268uz43vl5cen/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -268,15 +267,20 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/ck3847i8k0004i0uzfa1f26mf/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/ck384hmxh000068uzbyl82kl8/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          是时候放弃SimpleDateFormat了
+          Code Review最佳实践
         
       </div>
     </a>
   
+  
+    <a href="/2019/ck384hmxo000168uz4guggzu3/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">用枚举实现单例</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 
