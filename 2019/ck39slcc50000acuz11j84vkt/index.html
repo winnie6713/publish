@@ -6,13 +6,16 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://www.winnie.top">
-  <title>Archives | 专注Java</title>
+  <title>AOP实现 | 专注Java</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="专注Java">
-<meta property="og:url" content="http:&#x2F;&#x2F;www.winnie.top&#x2F;archives&#x2F;index.html">
+  <meta name="description" content="AOP实现 转载：https:&#x2F;&#x2F;xwjie.github.io&#x2F;rule&#x2F;aop.html#aop实现-2 AOP代码，主要就是打印日志和捕获异常，异常要区分已知异常和未知异常，其中未知的异常是我们重点关注的，可以做一些邮件通知啥的，已知异常可以再细分一下，可以不同的异常返回不同的返回码： 12345678910111213141516171819202122232425262728293031">
+<meta property="og:type" content="article">
+<meta property="og:title" content="AOP实现">
+<meta property="og:url" content="http:&#x2F;&#x2F;www.winnie.top&#x2F;2019&#x2F;ck39slcc50000acuz11j84vkt&#x2F;index.html">
 <meta property="og:site_name" content="专注Java">
+<meta property="og:description" content="AOP实现 转载：https:&#x2F;&#x2F;xwjie.github.io&#x2F;rule&#x2F;aop.html#aop实现-2 AOP代码，主要就是打印日志和捕获异常，异常要区分已知异常和未知异常，其中未知的异常是我们重点关注的，可以做一些邮件通知啥的，已知异常可以再细分一下，可以不同的异常返回不同的返回码： 12345678910111213141516171819202122232425262728293031">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-11-22T06:38:36.264Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="专注Java" type="application/atom+xml">
@@ -149,238 +152,177 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-AOP实现" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/ck39slccr0001acuzclv6huib/" class="archive-article-date">
-  	<time datetime="2019-11-22T06:56:07.903Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-22</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/ck39slccr0001acuzclv6huib/">异常处理</a>
+    <h1 class="article-title" itemprop="name">
+      AOP实现
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/ck39slcct0002acuzbkpa38pt/" class="archive-article-date">
-  	<time datetime="2019-11-22T06:39:30.678Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-22</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/ck39slcct0002acuzbkpa38pt/">日志打印</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/ck39slcc50000acuz11j84vkt/" class="archive-article-date">
+        
+        <a href="/2019/ck39slcc50000acuz11j84vkt/" class="archive-article-date">
   	<time datetime="2019-11-22T06:35:25.444Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-22</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/ck39slcc50000acuz11j84vkt/">AOP实现</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="AOP实现"><a href="#AOP实现" class="headerlink" title="AOP实现"></a>AOP实现</h2><p> 转载：<a href="https://xwjie.github.io/rule/aop.html#aop实现-2" target="_blank" rel="noopener">https://xwjie.github.io/rule/aop.html#aop实现-2</a></p>
+<p>AOP代码，主要就是打印日志和捕获异常，<strong>异常要区分已知异常和未知异常</strong>，其中未知的异常是我们重点关注的，可以做一些邮件通知啥的，已知异常可以再细分一下，可以<strong>不同的异常返回不同的返回码</strong>：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 处理和包装异常</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ControllerAOP</span> </span>&#123;</span><br><span class="line">  <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> Logger logger = LoggerFactory.getLogger(ControllerAOP<span class="class">.<span class="keyword">class</span>)</span>;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">public</span> Object <span class="title">handlerControllerMethod</span><span class="params">(ProceedingJoinPoint pjp)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">long</span> startTime = System.currentTimeMillis();</span><br><span class="line"></span><br><span class="line">    ResultBean&lt;?&gt; result;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">      result = (ResultBean&lt;?&gt;) pjp.proceed();</span><br><span class="line">      logger.info(pjp.getSignature() + <span class="string">"use time:"</span> + (System.currentTimeMillis() - startTime));</span><br><span class="line">    &#125; <span class="keyword">catch</span> (Throwable e) &#123;</span><br><span class="line">      result = handlerException(pjp, e);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> result;</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">    * 封装异常信息，注意区分已知异常（自己抛出的）和未知异常</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">  <span class="keyword">private</span> ResultBean&lt;?&gt; handlerException(ProceedingJoinPoint pjp, Throwable e) &#123;</span><br><span class="line">    ResultBean&lt;?&gt; result = <span class="keyword">new</span> ResultBean();</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 已知异常</span></span><br><span class="line">    <span class="keyword">if</span> (e <span class="keyword">instanceof</span> CheckException) &#123;</span><br><span class="line">      result.setMsg(e.getLocalizedMessage());</span><br><span class="line">      result.setCode(ResultBean.FAIL);</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (e <span class="keyword">instanceof</span> UnloginException) &#123;</span><br><span class="line">      result.setMsg(<span class="string">"Unlogin"</span>);</span><br><span class="line">      result.setCode(ResultBean.NO_LOGIN);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      logger.error(pjp.getSignature() + <span class="string">" error "</span>, e);</span><br><span class="line">      <span class="comment">//TODO 未知的异常，应该格外注意，可以发送邮件通知等</span></span><br><span class="line">      result.setMsg(e.toString());</span><br><span class="line">      result.setCode(ResultBean.FAIL);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> result;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-        <div class="article-info info-on-right">
-          
-          
+<h2 id="返回码定义"><a href="#返回码定义" class="headerlink" title="返回码定义"></a>返回码定义</h2><p>关于怎么样定义返回码，个人经验是 <strong>粗分异常，不能太细</strong>。如没有登陆返回-1，没有权限返回-2，参数校验错误返回1，其他未知异常返回-99等。需要注意的是，定义的时候，<strong>需要调用方单独处理的异常</strong>需要和其他区分开来，比如没有登陆这种异常，调用方不需要单独处理，前台调用请求的工具类统一处理即可。而参数校验异常或者没有权限异常需要调用方提示给用户，没有权限可能除了提示还会附上申请权限链接等，这就是异常的粗分。</p>
+<p>WARNING</p>
+<p>返回码不要太细，千万不要标题为空返回1，描述为空返回2，字段X非法返回3，这种定义看上去很专业，实际上会把前台和自己累死。</p>
+<h2 id="简单示例"><a href="#简单示例" class="headerlink" title="简单示例"></a>简单示例</h2><p>贴一个简单的controller。请对比 <a href="http://www.imooc.com/article/27569" target="_blank" rel="noopener">程序员你为什么这么累？ </a>里面原来的代码查看，没有对比就没有伤害。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 配置对象处理器</span></span><br><span class="line"><span class="comment"> * </span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> 晓风轻 https://github.com/xwjie/PLMCodeTemplate</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@RequestMapping</span>(<span class="string">"/config"</span>)</span><br><span class="line"><span class="meta">@RestController</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ConfigController</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">private</span> <span class="keyword">final</span> ConfigService configService;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="title">ConfigController</span><span class="params">(ConfigService configService)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.configService = configService;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="meta">@GetMapping</span>(<span class="string">"/all"</span>)</span><br><span class="line">  <span class="keyword">public</span> ResultBean&lt;Collection&lt;Config&gt;&gt; getAll() &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> ResultBean&lt;Collection&lt;Config&gt;&gt;(configService.getAll());</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">   * 新增数据, 返回新对象的id</span></span><br><span class="line"><span class="comment">   * </span></span><br><span class="line"><span class="comment">   * <span class="doctag">@param</span> config</span></span><br><span class="line"><span class="comment">   * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  <span class="meta">@PostMapping</span>(<span class="string">"/add"</span>)</span><br><span class="line">  <span class="function"><span class="keyword">public</span> ResultBean&lt;Long&gt; <span class="title">add</span><span class="params">(Config config)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> ResultBean&lt;Long&gt;(configService.add(config));</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">   * 根据id删除对象</span></span><br><span class="line"><span class="comment">   * </span></span><br><span class="line"><span class="comment">   * <span class="doctag">@param</span> id</span></span><br><span class="line"><span class="comment">   * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  <span class="meta">@PostMapping</span>(<span class="string">"/delete"</span>)</span><br><span class="line">  <span class="function"><span class="keyword">public</span> ResultBean&lt;Boolean&gt; <span class="title">delete</span><span class="params">(<span class="keyword">long</span> id)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> ResultBean&lt;Boolean&gt;(configService.delete(id));</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="meta">@PostMapping</span>(<span class="string">"/update"</span>)</span><br><span class="line">  <span class="function"><span class="keyword">public</span> ResultBean&lt;Boolean&gt; <span class="title">update</span><span class="params">(Config config)</span> </span>&#123;</span><br><span class="line">    configService.update(config);</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> ResultBean&lt;Boolean&gt;(<span class="keyword">true</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
+<h2 id="为什么不用ExceptionHandler"><a href="#为什么不用ExceptionHandler" class="headerlink" title="为什么不用ExceptionHandler"></a>为什么不用ExceptionHandler</h2><p>这是我发帖后问的最多的一个问题，很多人说为什么不用 ControllerAdvice + ExceptionHandler 来处理异常？觉得是我在重复发明轮子。首先，这2这都是AOP，本质上没有啥区别。而最重要的是ExceptionHandler只能处理异常，而我们的AOP除了处理异常，还有一个很重要的作用是打印日志，统计每一个controller方法的耗时，这在实际工作中也非常重要和有用的特性！</p>
+<p>TIP</p>
+<p>就算你使用ExceptionHandler，也不要成功和失败的时候返回不一样的数据格式，否则前台很难写好代码。</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" target="_blank" rel="noopener" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" target="_blank" rel="noopener" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" target="_blank" rel="noopener" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;" target="_blank" rel="noopener"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://www.winnie.top/2019/ck39slcc50000acuz11j84vkt/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/ck384tsq70001hguzhsq5hwxw/" class="archive-article-date">
-  	<time datetime="2019-11-21T01:43:58.830Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-21</time>
-</a>
+<nav id="article-nav">
+  
+    <a href="/2019/ck39slcct0002acuzbkpa38pt/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          日志打印
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/ck384tsq70001hguzhsq5hwxw/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">mysql高性能规范建议</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/ck384tsq70001hguzhsq5hwxw/">mysql高性能规范建议</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/ck384tsq90002hguz0tcz4iuy/" class="archive-article-date">
-  	<time datetime="2019-11-21T01:38:53.845Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-21</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/ck384tsq90002hguz0tcz4iuy/">一条sql语句是怎么执行的</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/ck384tsq00000hguzdvgienxx/" class="archive-article-date">
-  	<time datetime="2019-11-20T09:24:46.687Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-20</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/ck384tsq00000hguzdvgienxx/">Code Review最佳实践</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/ck384tsqc0004hguzft3qc76s/" class="archive-article-date">
-  	<time datetime="2019-11-20T07:31:32.232Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-20</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/ck384tsqc0004hguzft3qc76s/">是时候放弃SimpleDateFormat了</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/ck384tsqb0003hguz9x6ygfwf/" class="archive-article-date">
-  	<time datetime="2019-11-20T03:50:10.183Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-20</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/ck384tsqb0003hguz9x6ygfwf/">用枚举实现单例</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -403,8 +345,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
